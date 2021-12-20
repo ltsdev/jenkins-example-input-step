@@ -7,7 +7,7 @@ pipeline {
         sh '''
           hostname
           cat /etc/os-release
-          echo ${TAG_NAME}
+          printenv
         '''
       }
     }
