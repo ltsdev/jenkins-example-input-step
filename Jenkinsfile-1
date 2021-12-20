@@ -1,7 +1,7 @@
 pipeline {
   agent any
       environment {
-        def TAG_VERSION = sh(returnStdout: true, script: "echo '${env.GIT_BRANCH}' | cut -d'-' -f3").trim()
+        def TAG_VERSION = sh(returnStdout: true, script: "echo '${env.GIT_BRANCH}' | cut -d'/' -f3").trim()
     }
   stages {
     stage('input') {
