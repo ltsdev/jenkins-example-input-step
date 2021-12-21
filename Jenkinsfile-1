@@ -7,7 +7,7 @@ pipeline {
     stage('input') {
       steps {
         input(message: "Hello World! ${TAG_VERSION}", ok: 'Submit')
-        sh "cp /kubeconfig/ ."
+        sh "cp -r /kubeconfig/ ."
         sh "pwd"
         sh "ls -la"
         sh '''
