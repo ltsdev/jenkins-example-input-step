@@ -6,7 +6,6 @@ pipeline {
   stages {
     stage('input') {
       steps {
-        input(message: "Hello 11111111111! ${TAG_VERSION}", ok: 'Submit')
         sh "cp -r /kubeconfig/* ."
         sh "pwd"
         sh "ls -la /"
