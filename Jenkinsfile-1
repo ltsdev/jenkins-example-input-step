@@ -12,7 +12,6 @@ pipeline {
         sh "ls -la /"
         sh '''
           hostname
-          cat /etc/os-release
           echo ${TAG_VERSION}
         '''
       }
