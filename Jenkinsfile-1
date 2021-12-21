@@ -9,7 +9,7 @@ pipeline {
         input(message: "Hello World! ${TAG_VERSION}", ok: 'Submit')
         sh "cp -r /kubeconfig/ ."
         sh "pwd"
-        sh "ls -la"
+        sh "ls -la /kubeconfig"
         sh '''
           hostname
           cat /etc/os-release
